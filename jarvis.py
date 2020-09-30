@@ -88,7 +88,10 @@ if __name__ == '__main__':
 
         elif 'open google' in query:
             webbrowser.get('chrome').open_new_tab('https://google.com')
-
+        elif 'search' in query:
+            query = query.replace('search', '')
+            webbrowser.get('chrome').open_new_tab('https://www.google.com/search?q=(query)')
+            
         elif 'open stackoverflow' in query:
             webbrowser.get('chrome').open_new_tab('https://stackoverflow.com')
 
